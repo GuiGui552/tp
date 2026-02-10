@@ -31,7 +31,7 @@ async function getNearbyPlaces(req, res) {
     // Construction du filtre
     const filter = {
       geometry: {
-        $near: {
+        $near: { // permet de trouver des documents proches d’un point géographique, triés automatiquement par distance
           $geometry: { 
             type: "Point", 
             coordinates: [Number(lng), Number(lat)] 
